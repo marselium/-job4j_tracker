@@ -13,9 +13,9 @@ public class Jukebox {
 
     public static void main(String[] args) {
         Jukebox fender = new Jukebox();
+        fender.music(9);
         fender.music(1);
         fender.music(2);
         fender.music(3);
-        fender.music(123);
     }
 }
