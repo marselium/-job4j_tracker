@@ -8,7 +8,7 @@ public class Calculator {
         return x + y;
     }
 
-    public static int minus(int y){
+    public static int minus(int y) {
         return y - x;
     }
 
@@ -16,11 +16,11 @@ public class Calculator {
         return x * a;
     }
 
-    public int divide(int a){
+    public int divide(int a) {
         return a / x;
     }
 
-    public int sumAllOperation(int a){
+    public int sumAllOperation(int a) {
         return sum(a) + minus(a) + this.multiply(a) + this.divide(a);
     }
 
