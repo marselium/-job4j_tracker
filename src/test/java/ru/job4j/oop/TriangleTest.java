@@ -16,4 +16,15 @@ public class TriangleTest {
         double expected = 8;
         assertThat(rsl).isCloseTo(expected, offset(0.001));
     }
+
+    @Test
+    public void when24and410and11ThenMinus1() {
+        Point a = new Point(2, 4);
+        Point b = new Point(4, 10);
+        Point c = new Point(1, 1);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        double expected = -1;
+        assertThat(rsl).isCloseTo(expected, offset(0.001));
+    }
 }
