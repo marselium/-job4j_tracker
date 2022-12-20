@@ -7,5 +7,4 @@ public class Programmer extends Engineer {
         super(experience, degree);
         this.programLang = programLang;
     }
-
 }
