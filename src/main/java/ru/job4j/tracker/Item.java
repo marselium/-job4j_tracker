@@ -6,6 +6,7 @@ public class Item {
 
     public Item() {
     }
+
     public int getId() {
         return id;
     }
