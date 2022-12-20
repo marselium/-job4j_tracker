@@ -6,4 +6,5 @@ public class Profession {
     public Profession(boolean degree) {
         this.degree = degree;
     }
+
 }
