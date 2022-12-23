@@ -11,7 +11,6 @@ public class Item {
     public Item() {
     }
 
-
     public Item(String name) {
         this.name = name;
     }
@@ -24,7 +23,6 @@ public class Item {
     public LocalDateTime getCreated() {
         return this.created;
     }
-
 
     public int getId() {
         return id;
