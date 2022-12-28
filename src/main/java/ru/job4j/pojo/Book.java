@@ -25,5 +25,4 @@ public class Book {
         this.pages = pages;
     }
 
-
 }
