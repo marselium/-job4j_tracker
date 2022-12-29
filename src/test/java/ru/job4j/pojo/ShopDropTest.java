@@ -53,4 +53,5 @@ public class ShopDropTest {
         assertThat(rsl[3].getName()).isEqualTo("Fruit");
         assertThat(rsl[products.length - 1]).isNull();
     }
+
 }
