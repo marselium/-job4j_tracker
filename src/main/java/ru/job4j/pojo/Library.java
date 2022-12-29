@@ -15,7 +15,6 @@ public class Library {
         for (Book book : lib) {
             System.out.println(book.getName() + "," + book.getPages());
         }
-
         System.out.println("-------------");
         System.out.println("Переставляем книги с 0 и 3 индексом");
         lib[0] = unnamed;
@@ -23,11 +22,10 @@ public class Library {
         for (Book book : lib) {
             System.out.println(book.getName() + "," + book.getPages());
         }
-
         System.out.println("-------------");
         System.out.println("Только Clean Code");
         for (Book bk : lib) {
-            if (bk == unnamed) {
+            if ("Clean Code".equals(bk.getName())) {
                 System.out.println(bk.getName() + "," + bk.getPages());
             }
         }
