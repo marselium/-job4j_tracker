@@ -6,6 +6,9 @@ public class Broken {
     private String surname;
     public static final String NEWVALUE = "";
 
+    public Broken() {
+    }
+
     public void echo() {
     }
 
@@ -16,8 +19,5 @@ public class Broken {
     }
 
     public void method(int a, int b, int c, int d, int e, int f, int g) {
-    }
-
-    public Broken() {
     }
 }
