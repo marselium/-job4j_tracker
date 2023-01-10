@@ -14,7 +14,9 @@ public class MagicBall {
             name = "Да.";
         } else if (answer == 1) {
             name = "Нет.";
-        } else name = "Я не знаю.";
+        } else {
+            name = "Я не знаю.";
+        }
         System.out.println(name);
     }
 }
