@@ -27,4 +27,5 @@ public class Matches {
             System.out.println("Выиграл второй игрок");
         }
     }
+
 }
