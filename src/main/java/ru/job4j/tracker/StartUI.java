@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class StartUI {
 
-    @SuppressWarnings("checkstyle:EmptyBlock")
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -53,6 +52,7 @@ public class StartUI {
                 run = false;
             }
         }
+
     }
 
     private void showMenu() {
