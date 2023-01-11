@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class StartUI {
 
+    @SuppressWarnings("checkstyle:EmptyBlock")
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -38,6 +39,15 @@ public class StartUI {
                     System.out.println("Заявка изменена успешно.");
                 } else {
                     System.out.println("Ошибка замены заявки.");
+                }
+            } else if (select == 3) {
+                System.out.println("=== Delete item ===");
+                System.out.print("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                if (tracker.delete(id)) {
+                    System.out.println("Заявка удалена успешно.");
+                } else {
+                    System.out.println("Ошибка удаления заявки.");
                 }
             } else if (select == 6) {
                 run = false;
