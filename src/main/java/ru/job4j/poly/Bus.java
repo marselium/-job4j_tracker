@@ -2,17 +2,17 @@ package ru.job4j.poly;
 
 public class Bus implements Transport {
     @Override
-    public void drive() {
-
+    public String drive() {
+        return null;
     }
 
     @Override
-    public void passengers(int count) {
-
-    }
-
-    @Override
-    public int refill(int price) {
+    public int passengers(int count) {
         return 0;
+    }
+
+    @Override
+    public int refill(int liters, int price) {
+        return price;
     }
 }
