@@ -7,12 +7,17 @@ public class Bus implements Transport {
     }
 
     @Override
-    public int passengers(int count) {
-        return 0;
+    public void passengers(int count) {
+        count = 20;
+        System.out.println("Вместимость = " + count + " прссажиров.");
     }
 
     @Override
-    public int refill(int liters, int price) {
-        return price;
+    public void refill(float liters, float price) {
+        liters = 30;
+        price = 49.5f;
+        float sum = liters * price;
+        System.out.println("Цена за " + liters + "л. бензина"
+                + " будет составлять " + sum + " рублей.");
     }
 }

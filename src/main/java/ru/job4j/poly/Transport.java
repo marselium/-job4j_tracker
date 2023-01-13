@@ -4,7 +4,7 @@ public interface Transport {
 
     String drive();
 
-    int passengers(int count);
+    void passengers(int count);
 
-    int refill(int liters, int price);
+    void refill(float liters, float price);
 }
