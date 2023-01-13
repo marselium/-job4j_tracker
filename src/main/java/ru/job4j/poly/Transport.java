@@ -6,5 +6,5 @@ public interface Transport {
 
     void passengers(int count);
 
-    void refill(float liters, float price);
+    float refill(float liters, float price);
 }
