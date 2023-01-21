@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StartUITest {
     @Test
     public void whenCreateItem() {
-        Output out = new ConsoleOutput();
+        Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"0", "Item name", "1"}
         );
@@ -22,7 +22,7 @@ public class StartUITest {
 
     @Test
     public void whenReplaceItem() {
-        Output out = new ConsoleOutput();
+        Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Edited item"));
         String replacedName = "New item name";
@@ -39,7 +39,7 @@ public class StartUITest {
 
     @Test
     public void whenDeleteItem() {
-        Output out = new ConsoleOutput();
+        Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
         Input in = new StubInput(
