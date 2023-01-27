@@ -41,6 +41,9 @@ public class PasswordValidator {
             if (!isDigit(symbol) && !isLetter(symbol)) {
                 isSpec = true;
             }
+            if (isDigit && upperCase && lowerCase && isSpec) {
+                break;
+            }
         }
 
         if (!upperCase) {
