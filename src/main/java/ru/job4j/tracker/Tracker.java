@@ -33,6 +33,7 @@ public class Tracker {
             Item value = items.get(index);
             if (value.getId() == id) {
                 rsl = index;
+                break;
             }
         }
         return rsl;
@@ -48,8 +49,7 @@ public class Tracker {
         boolean rsl = index != -1;
         if (rsl) {
             item.setId(id);
-            items.remove(index);
-            items.add(item);
+            items.set(index, item);
         }
         return rsl;
     }
