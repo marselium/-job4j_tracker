@@ -58,10 +58,8 @@ public class BankService {
         Account first = findByRequisite(srcPassport, srcRequisite);
         Account second = findByRequisite(destPassport, destRequisite);
         if (first != null && second != null && first.getBalance() >= amount) {
-            double srcBalance = first.getBalance();
-            first.setBalance(srcBalance - amount);
-            double destBalance = second.getBalance();
-            second.setBalance(destBalance + amount);
+            first.setBalance(first.getBalance() - amount);
+            second.setBalance(second.getBalance() + amount);
             rsl = true;
         }
         return rsl;
