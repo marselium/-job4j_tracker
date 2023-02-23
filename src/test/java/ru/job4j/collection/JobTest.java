@@ -52,7 +52,7 @@ public class JobTest {
     public void whenComparatorByNameAndPriority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Reboot server", 0),
+                new Job("Fix bugs", 0),
                 new Job("Fix bugs", 1)
         );
         assertThat(rsl).isLessThan(0);
