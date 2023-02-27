@@ -4,7 +4,12 @@ import ru.job4j.bank.Account;
 import ru.job4j.bank.User;
 
 import java.util.*;
-
+/**
+ * Класс, в котором описаны методы для работы с пользователями и
+ * их счетами внутри банковской системы
+* @author MARSEL YUMAGULOV
+* @version 1.0
+*/
 public class BankService {
     /**
      * Поле, в которое записываются все клиенты и их счета
