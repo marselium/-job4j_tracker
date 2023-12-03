@@ -1,6 +1,11 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.actions;
+
+import ru.job4j.tracker.*;
+
+import java.sql.SQLException;
 
 public class CreateAction implements UserAction {
+
     private final Output out;
 
     public CreateAction(Output out) {
@@ -9,16 +14,15 @@ public class CreateAction implements UserAction {
 
     @Override
     public String name() {
-        return "Create";
+        return "=== Create a new Item ====";
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Create a new Item ====");
+    public boolean execute(Input input, Store tracker) throws SQLException {
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
         tracker.add(item);
-        out.println("Добавленная заявка" + item);
+        out.println("Item successfully added!");
         return true;
     }
 }
