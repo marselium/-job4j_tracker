@@ -67,11 +67,11 @@ public class Item {
             return false;
         }
         Item item = (Item) o;
-        return Objects.equals(id, item.id) && Objects.equals(name, item.name);
+        return id == item.id && Objects.equals(name, item.name) && Objects.equals(created, item.created);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, name, created);
     }
 }
