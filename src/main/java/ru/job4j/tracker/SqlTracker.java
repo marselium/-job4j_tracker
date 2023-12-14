@@ -122,7 +122,7 @@ public class SqlTracker implements Store, AutoCloseable {
         Item item;
         List<Item> items = new ArrayList<>();
         try (PreparedStatement st =
-                     this.cn.prepareStatement("select * from items where aname = (?)")) {
+                     this.cn.prepareStatement("select * from items where name = (?)")) {
             st.setString(1, key);
             try (ResultSet rs = st.executeQuery()) {
                 while (rs.next()) {

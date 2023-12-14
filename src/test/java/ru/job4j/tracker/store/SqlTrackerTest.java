@@ -57,4 +57,66 @@ public class SqlTrackerTest {
         tracker.add(item);
         assertThat(tracker.findById(item.getId())).isEqualTo(item);
     }
+
+    @Test
+    public void whenReplaceOneItem() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item first = new Item("First");
+        Item third = new Item("Third");
+        Item second = new Item("Second");
+        tracker.add(first);
+        tracker.add(third);
+        tracker.replace(third.getId(), second);
+        assertThat(tracker.findById(third.getId()).getName()).isEqualTo(second.getName());
+    }
+
+    @Test
+    public void whenAddThreeItemsThenFindAll() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item first = new Item("First");
+        Item third = new Item("Third");
+        Item second = new Item("Second");
+        tracker.add(first);
+        tracker.add(second);
+        tracker.add(third);
+        List<Item> list = List.of(first, second, third);
+        assertThat(tracker.findAll()).containsAll(list);
+    }
+
+    @Test
+    public void whenAddThreeItemsThenDeleteAllOfItems() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item first = new Item("First");
+        Item third = new Item("Third");
+        Item second = new Item("Second");
+        tracker.add(first);
+        tracker.add(second);
+        tracker.add(third);
+        List<Item> list = List.of(first, second, third);
+        assertThat(tracker.findAll()).containsAll(list);
+        tracker.delete(first.getId());
+        tracker.delete(second.getId());
+        tracker.delete(third.getId());
+        assertThat(tracker.findAll()).doesNotContainAnyElementsOf(list);
+    }
+
+    @Test
+    public void whenAddTwoItemsThenFindByName() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item first = new Item("First");
+        Item second = new Item("Second");
+        tracker.add(first);
+        tracker.add(second);
+        List<Item> exp = List.of(second);
+        assertThat(tracker.findByName("Second")).isEqualTo(exp);
+    }
+
+    @Test
+    public void whenDoesNotContainName() {
+        SqlTracker tracker = new SqlTracker(connection);
+        Item first = new Item("First");
+        tracker.add(first);
+        List<Item> exp = List.of();
+        assertThat(tracker.findByName("Second")).isEqualTo(exp);
+    }
 }
